@@ -5,6 +5,7 @@
 package cr.ac.ucr.juegodeparchisc5c589;
 
 import cr.ac.ucr.juegodeparchisc5c589.controlador.ControladorPrincipal;
+import cr.ac.ucr.juegodeparchisc5c589.modelo.LogicaPrincipal;
 
 /**
  *
@@ -12,7 +13,8 @@ import cr.ac.ucr.juegodeparchisc5c589.controlador.ControladorPrincipal;
  */
 public class JuegoDeParchisC5C589 {
  public static void main(String[] args) {
-       ControladorPrincipal controlador= new ControladorPrincipal();
-    }
+       LogicaPrincipal logicaPrincipal = new LogicaPrincipal();
+       ControladorPrincipal controlador= new ControladorPrincipal(logicaPrincipal);
+}
 }
 

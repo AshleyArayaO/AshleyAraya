@@ -4,6 +4,7 @@
  */
 package cr.ac.ucr.juegodeparchisc5c589.controlador;
 
+import cr.ac.ucr.juegodeparchisc5c589.modelo.LogicaPrincipal;
 import cr.ac.ucr.juegodeparchisc5c589.vista.GUICredito;
 import cr.ac.ucr.juegodeparchisc5c589.vista.GUIHistoria;
 import cr.ac.ucr.juegodeparchisc5c589.vista.GUIInstrucciones;
@@ -16,12 +17,16 @@ import java.awt.event.ActionListener;
  * @author Thinkpad P52
  */
  public class ControladorPrincipal implements ActionListener {
+     
+   private final LogicaPrincipal logicaPrincipal; 
    private GUIPrincipal guiPrincipal;
    private GUICredito guiCredito;
    private GUIInstrucciones guiInstrucciones;
    private GUIHistoria guiHistoria;
 
-    public ControladorPrincipal() {
+    public ControladorPrincipal(LogicaPrincipal logicaPrincipal) {
+        this.logicaPrincipal = logicaPrincipal;
+        
         guiPrincipal= new GUIPrincipal(this);
         guiPrincipal.setVisible(true);
         guiCredito= new GUICredito(this);
